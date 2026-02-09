@@ -1,6 +1,6 @@
 package br.com.db.desafio.votacao.controller.voto;
 
-import br.com.db.desafio.votacao.controller.pauta.ResultadoPautaResponseDto;
+import br.com.db.desafio.votacao.usecase.voto.VotoUseCase;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,7 +14,7 @@ public class VotoController {
     private final VotoUseCase votoUseCase;
 
     @PostMapping("/{idPauta}/votar")
-    public ResponseEntity<ResultadoPautaResponseDto> realizarVoto(
+    public ResponseEntity<VotoResponseDto> realizarVoto(
             @PathVariable Long idPauta,
             @RequestBody VotoRequestDto request) {
 
