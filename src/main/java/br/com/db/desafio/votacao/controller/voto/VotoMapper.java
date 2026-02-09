@@ -12,8 +12,8 @@ public interface VotoMapper {
 
     @Mapping(target = "id", ignore = true)
     @Mapping(target = "pautaId", source = "pauta.id")
-    @Mapping(target = "cpfAssociado", source = "request.cpf")
-    @Mapping(target = "situacaoVoto", source = "request.voto")
+    @Mapping(target = "cpfAssociado", source = "request.cpfAssociado")
+    @Mapping(target = "situacao", source = "request.voto")
     Voto toVoto(VotoRequestDto request, Pauta pauta, LocalDateTime dataHora);
 
     VotoResponseDto toVotoResponseDto(Voto voto);

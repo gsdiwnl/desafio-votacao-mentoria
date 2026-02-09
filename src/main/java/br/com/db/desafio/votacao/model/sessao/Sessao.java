@@ -20,13 +20,6 @@ public class Sessao {
     @Enumerated(EnumType.STRING)
     private Status status;
 
-    @PrePersist
-    public void prePersist() {
-
-        this.inicio = LocalDateTime.now();
-        this.status = Status.ABERTA;
-    }
-
     public void encerrar() {
 
         if (this.status != Status.ABERTA) {
