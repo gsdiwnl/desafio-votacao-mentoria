@@ -16,8 +16,8 @@ public class PautaService {
 
     public ResultadoPautaResponseDto calcularResultado(Collection<Voto> votos) {
 
-        var totalFavor = votos.stream().filter(v -> v.getSituacaoVoto().name().equals("SIM")).count();
-        var totalContra = votos.stream().filter(v -> v.getSituacaoVoto().name().equals("NAO")).count();
+        var totalFavor = votos.stream().filter(v -> v.getSituacao().name().equals("SIM")).count();
+        var totalContra = votos.stream().filter(v -> v.getSituacao().name().equals("NAO")).count();
 
         var resultado = determinarResultado(totalFavor, totalContra);
 
