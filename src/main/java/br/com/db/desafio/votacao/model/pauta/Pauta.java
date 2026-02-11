@@ -21,10 +21,4 @@ public class Pauta {
     @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JoinColumn(name = "sessao_id", referencedColumnName = "id")
     private Sessao sessao;
-
-    @PrePersist
-    public void prePersist() {
-
-        this.dataCriacao = LocalDateTime.now();
-    }
 }

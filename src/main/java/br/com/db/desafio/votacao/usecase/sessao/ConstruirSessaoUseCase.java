@@ -2,7 +2,7 @@ package br.com.db.desafio.votacao.usecase.sessao;
 
 import br.com.db.desafio.votacao.controller.sessao.dto.SessaoDto;
 
-public interface CriarSessaoUseCase {
+public interface ConstruirSessaoUseCase {
 
-    SessaoDto criar(Integer duracao);
+    SessaoDto construir(Integer duracao);
 }

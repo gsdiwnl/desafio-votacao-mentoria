@@ -9,8 +9,8 @@ import br.com.db.desafio.votacao.repository.PautaRepository;
 import br.com.db.desafio.votacao.repository.VotoRepository;
 import br.com.db.desafio.votacao.service.validador.OrquestradorValidacao;
 import br.com.db.desafio.votacao.service.validador.ValidadorMapper;
+import br.com.db.desafio.votacao.usecase.voto.RealizarVotoUseCase;
 import br.com.db.desafio.votacao.usecase.voto.VotoMapper;
-import br.com.db.desafio.votacao.usecase.voto.VotoUseCase;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -20,7 +20,7 @@ import static br.com.db.desafio.votacao.service.validador.EtapasValidacao.VOTACA
 
 @Service
 @RequiredArgsConstructor
-public class VotoUseCaseImpl implements VotoUseCase {
+public class RealizarVotoUseCaseImpl implements RealizarVotoUseCase {
 
     private final PautaRepository pautaRepository;
     private final VotoRepository votoRepository;

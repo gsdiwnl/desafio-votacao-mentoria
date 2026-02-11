@@ -7,7 +7,7 @@ import java.time.LocalDateTime;
 
 @Getter
 @Builder
-public class PautaResponseDto {
+public class AssembleiaResponseDto {
 
     private Long id;
     private LocalDateTime fimSessao;

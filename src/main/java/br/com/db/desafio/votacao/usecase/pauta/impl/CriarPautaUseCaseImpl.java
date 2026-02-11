@@ -1,11 +1,11 @@
 package br.com.db.desafio.votacao.usecase.pauta.impl;
 
+import br.com.db.desafio.votacao.controller.pauta.dto.AssembleiaResponseDto;
 import br.com.db.desafio.votacao.controller.pauta.dto.PautaRequestDto;
-import br.com.db.desafio.votacao.controller.pauta.dto.PautaResponseDto;
+import br.com.db.desafio.votacao.controller.sessao.dto.SessaoDto;
 import br.com.db.desafio.votacao.repository.PautaRepository;
 import br.com.db.desafio.votacao.usecase.pauta.CriarPautaUseCase;
 import br.com.db.desafio.votacao.usecase.pauta.PautaMapper;
-import br.com.db.desafio.votacao.usecase.sessao.CriarSessaoUseCase;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -16,12 +16,8 @@ public class CriarPautaUseCaseImpl implements CriarPautaUseCase {
     private final PautaMapper pautaMapper;
     private final PautaRepository pautaRepository;
 
-    private final CriarSessaoUseCase criarSessaoUseCase;
-
     @Override
-    public PautaResponseDto criar(PautaRequestDto request) {
-
-        var sessaoDto = criarSessaoUseCase.criar(request.duracao());
+    public AssembleiaResponseDto criar(PautaRequestDto request, SessaoDto sessaoDto) {
 
         var pauta = pautaMapper.mapToPauta(request, sessaoDto);
         var pautaSalva = pautaRepository.save(pauta);

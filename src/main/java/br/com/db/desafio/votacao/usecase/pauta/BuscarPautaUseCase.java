@@ -1,11 +1,11 @@
 package br.com.db.desafio.votacao.usecase.pauta;
 
-import br.com.db.desafio.votacao.controller.pauta.dto.PautaResponseDto;
+import br.com.db.desafio.votacao.controller.pauta.dto.AssembleiaResponseDto;
 
 import java.util.Collection;
 
 public interface BuscarPautaUseCase {
 
-    PautaResponseDto buscar(Long id);
-    Collection<PautaResponseDto> buscarTodas();
+    AssembleiaResponseDto buscar(Long id);
+    Collection<AssembleiaResponseDto> buscarTodas();
 }

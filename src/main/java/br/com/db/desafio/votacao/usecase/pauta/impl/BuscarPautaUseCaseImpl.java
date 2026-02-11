@@ -1,6 +1,6 @@
 package br.com.db.desafio.votacao.usecase.pauta.impl;
 
-import br.com.db.desafio.votacao.controller.pauta.dto.PautaResponseDto;
+import br.com.db.desafio.votacao.controller.pauta.dto.AssembleiaResponseDto;
 import br.com.db.desafio.votacao.exception.ResourceNotFoundException;
 import br.com.db.desafio.votacao.repository.PautaRepository;
 import br.com.db.desafio.votacao.usecase.pauta.BuscarPautaUseCase;
@@ -18,7 +18,7 @@ public class BuscarPautaUseCaseImpl implements BuscarPautaUseCase {
     private final PautaMapper pautaMapper;
 
     @Override
-    public PautaResponseDto buscar(Long id) {
+    public AssembleiaResponseDto buscar(Long id) {
 
         var pauta = pautaRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Pauta não encontrada para o ID: " + id));
@@ -27,7 +27,7 @@ public class BuscarPautaUseCaseImpl implements BuscarPautaUseCase {
     }
 
     @Override
-    public Collection<PautaResponseDto> buscarTodas() {
+    public Collection<AssembleiaResponseDto> buscarTodas() {
 
         var pautas = pautaRepository.findAll();
 

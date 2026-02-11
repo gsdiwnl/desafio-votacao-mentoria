@@ -1,11 +1,12 @@
 package br.com.db.desafio.votacao.controller.pauta;
 
+import br.com.db.desafio.votacao.controller.pauta.dto.AssembleiaResponseDto;
 import br.com.db.desafio.votacao.controller.pauta.dto.PautaRequestDto;
-import br.com.db.desafio.votacao.controller.pauta.dto.PautaResponseDto;
 import br.com.db.desafio.votacao.controller.pauta.dto.ResultadoPautaResponseDto;
+import br.com.db.desafio.votacao.usecase.assembleia.ConstruirAssembleiaUseCase;
 import br.com.db.desafio.votacao.usecase.pauta.BuscarPautaUseCase;
+import br.com.db.desafio.votacao.usecase.pauta.CalcularResultadoPautaUseCase;
 import br.com.db.desafio.votacao.usecase.pauta.CriarPautaUseCase;
-import br.com.db.desafio.votacao.usecase.pauta.ResultadoPautaUseCase;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -20,25 +21,27 @@ import java.util.Collection;
 public class PautaController {
 
     private final CriarPautaUseCase criarPautaUseCase;
+
     private final BuscarPautaUseCase buscarPautaUseCase;
-    private final ResultadoPautaUseCase resultadoPautaUseCase;
+    private final ConstruirAssembleiaUseCase construirAssembleiaUseCase;
+    private final CalcularResultadoPautaUseCase calcularResultadoPautaUseCase;
 
     @PostMapping
-    public ResponseEntity<PautaResponseDto> criarPauta(@Valid @RequestBody PautaRequestDto request) {
+    public ResponseEntity<AssembleiaResponseDto> criarPauta(@Valid @RequestBody PautaRequestDto request) {
 
-        var response = criarPautaUseCase.criar(request);
+        var response = construirAssembleiaUseCase.construir(request);
         return ResponseEntity.status(HttpStatus.CREATED).body(response);
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<PautaResponseDto> obterPauta(@PathVariable Long id) {
+    public ResponseEntity<AssembleiaResponseDto> obterPauta(@PathVariable Long id) {
 
         var response = buscarPautaUseCase.buscar(id);
         return ResponseEntity.status(HttpStatus.OK).body(response);
     }
 
     @GetMapping
-    public ResponseEntity<Collection<PautaResponseDto>> obterPautas() {
+    public ResponseEntity<Collection<AssembleiaResponseDto>> obterPautas() {
 
         var response = buscarPautaUseCase.buscarTodas();
         return ResponseEntity.status(HttpStatus.OK).body(response);
@@ -47,7 +50,7 @@ public class PautaController {
     @GetMapping("/{id}/resultado")
     public ResponseEntity<ResultadoPautaResponseDto> obterResultado(@PathVariable Long id) {
 
-        var response = resultadoPautaUseCase.calcular(id);
+        var response = calcularResultadoPautaUseCase.calcular(id);
         return ResponseEntity.status(HttpStatus.OK).body(response);
     }
 }

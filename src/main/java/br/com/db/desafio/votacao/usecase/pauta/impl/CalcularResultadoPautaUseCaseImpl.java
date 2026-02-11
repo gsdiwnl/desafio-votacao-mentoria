@@ -3,13 +3,13 @@ package br.com.db.desafio.votacao.usecase.pauta.impl;
 import br.com.db.desafio.votacao.controller.pauta.dto.ResultadoPautaResponseDto;
 import br.com.db.desafio.votacao.repository.VotoRepository;
 import br.com.db.desafio.votacao.service.PautaService;
-import br.com.db.desafio.votacao.usecase.pauta.ResultadoPautaUseCase;
+import br.com.db.desafio.votacao.usecase.pauta.CalcularResultadoPautaUseCase;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
-public class ResultadoPautaUseCaseImpl implements ResultadoPautaUseCase {
+public class CalcularResultadoPautaUseCaseImpl implements CalcularResultadoPautaUseCase {
 
     private final VotoRepository votoRepository;
     private final PautaService pautaService;
