@@ -1,7 +1,7 @@
 package br.com.db.desafio.votacao.usecase.sessao;
 
-import br.com.db.desafio.votacao.controller.sessao.SessaoResponseDto;
-import br.com.db.desafio.votacao.controller.sessao.StatusSessaoResponseDto;
+import br.com.db.desafio.votacao.controller.sessao.dto.SessaoResponseDto;
+import br.com.db.desafio.votacao.controller.sessao.dto.StatusSessaoResponseDto;
 
 public interface StatusSessaoUseCase {
 

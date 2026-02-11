@@ -1,5 +1,6 @@
-package br.com.db.desafio.votacao.controller.sessao;
+package br.com.db.desafio.votacao.controller.sessao.dto;
 
+import br.com.db.desafio.votacao.model.sessao.Status;
 import lombok.Builder;
 import lombok.Getter;
 
@@ -7,9 +8,9 @@ import java.time.LocalDateTime;
 
 @Getter
 @Builder
-public class SessaoResponseDto {
+public class SessaoDto {
 
     private LocalDateTime inicio;
     private LocalDateTime fim;
-    private String status;
+    private Status status;
 }

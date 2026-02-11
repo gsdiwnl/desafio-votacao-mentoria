@@ -1,4 +1,4 @@
-package br.com.db.desafio.votacao.controller.voto;
+package br.com.db.desafio.votacao.controller.voto.dto;
 
 import lombok.Builder;
 import lombok.Getter;

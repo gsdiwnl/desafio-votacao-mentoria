@@ -1,8 +1,7 @@
 package br.com.db.desafio.votacao.usecase.voto.impl;
 
-import br.com.db.desafio.votacao.controller.voto.VotoMapper;
-import br.com.db.desafio.votacao.controller.voto.VotoRequestDto;
-import br.com.db.desafio.votacao.controller.voto.VotoResponseDto;
+import br.com.db.desafio.votacao.controller.voto.dto.VotoRequestDto;
+import br.com.db.desafio.votacao.controller.voto.dto.VotoResponseDto;
 import br.com.db.desafio.votacao.exception.ResourceNotFoundException;
 import br.com.db.desafio.votacao.model.pauta.Pauta;
 import br.com.db.desafio.votacao.model.voto.Voto;
@@ -10,6 +9,7 @@ import br.com.db.desafio.votacao.repository.PautaRepository;
 import br.com.db.desafio.votacao.repository.VotoRepository;
 import br.com.db.desafio.votacao.service.validador.OrquestradorValidacao;
 import br.com.db.desafio.votacao.service.validador.ValidadorMapper;
+import br.com.db.desafio.votacao.usecase.voto.VotoMapper;
 import br.com.db.desafio.votacao.usecase.voto.VotoUseCase;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

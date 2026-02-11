@@ -1,8 +1,8 @@
 package br.com.db.desafio.votacao.service;
 
-import br.com.db.desafio.votacao.controller.pauta.PautaMapper;
-import br.com.db.desafio.votacao.controller.pauta.ResultadoPautaResponseDto;
+import br.com.db.desafio.votacao.controller.pauta.dto.ResultadoPautaResponseDto;
 import br.com.db.desafio.votacao.model.voto.Voto;
+import br.com.db.desafio.votacao.usecase.pauta.PautaMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

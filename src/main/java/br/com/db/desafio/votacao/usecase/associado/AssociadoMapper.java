@@ -1,5 +1,7 @@
-package br.com.db.desafio.votacao.controller.associado;
+package br.com.db.desafio.votacao.usecase.associado;
 
+import br.com.db.desafio.votacao.controller.associado.dto.AssociadoRequestDto;
+import br.com.db.desafio.votacao.controller.associado.dto.AssociadoResponseDto;
 import br.com.db.desafio.votacao.model.associado.Associado;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;

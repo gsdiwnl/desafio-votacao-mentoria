@@ -1,10 +1,10 @@
 package br.com.db.desafio.votacao.usecase.pauta.impl;
 
-import br.com.db.desafio.votacao.controller.pauta.PautaMapper;
-import br.com.db.desafio.votacao.controller.pauta.PautaResponseDto;
+import br.com.db.desafio.votacao.controller.pauta.dto.PautaResponseDto;
 import br.com.db.desafio.votacao.exception.ResourceNotFoundException;
 import br.com.db.desafio.votacao.repository.PautaRepository;
 import br.com.db.desafio.votacao.usecase.pauta.BuscarPautaUseCase;
+import br.com.db.desafio.votacao.usecase.pauta.PautaMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

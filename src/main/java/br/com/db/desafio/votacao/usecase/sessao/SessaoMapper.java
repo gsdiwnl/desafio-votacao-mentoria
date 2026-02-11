@@ -1,5 +1,8 @@
-package br.com.db.desafio.votacao.controller.sessao;
+package br.com.db.desafio.votacao.usecase.sessao;
 
+import br.com.db.desafio.votacao.controller.sessao.dto.SessaoDto;
+import br.com.db.desafio.votacao.controller.sessao.dto.SessaoResponseDto;
+import br.com.db.desafio.votacao.controller.sessao.dto.StatusSessaoResponseDto;
 import br.com.db.desafio.votacao.model.sessao.Sessao;
 import br.com.db.desafio.votacao.model.sessao.Status;
 import org.mapstruct.Mapper;

@@ -1,4 +1,4 @@
-package br.com.db.desafio.votacao.controller.sessao;
+package br.com.db.desafio.votacao.controller.sessao.dto;
 
 import br.com.db.desafio.votacao.model.sessao.Status;
 import lombok.Builder;

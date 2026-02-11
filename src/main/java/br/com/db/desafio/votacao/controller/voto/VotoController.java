@@ -1,5 +1,7 @@
 package br.com.db.desafio.votacao.controller.voto;
 
+import br.com.db.desafio.votacao.controller.voto.dto.VotoRequestDto;
+import br.com.db.desafio.votacao.controller.voto.dto.VotoResponseDto;
 import br.com.db.desafio.votacao.usecase.voto.VotoUseCase;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;

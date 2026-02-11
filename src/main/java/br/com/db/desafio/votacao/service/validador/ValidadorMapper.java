@@ -1,7 +1,7 @@
 package br.com.db.desafio.votacao.service.validador;
 
 
-import br.com.db.desafio.votacao.controller.voto.VotoRequestDto;
+import br.com.db.desafio.votacao.controller.voto.dto.VotoRequestDto;
 import br.com.db.desafio.votacao.model.pauta.Pauta;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;

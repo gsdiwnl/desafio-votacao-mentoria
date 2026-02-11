@@ -1,9 +1,9 @@
 package br.com.db.desafio.votacao.usecase.associado.impl;
 
-import br.com.db.desafio.votacao.controller.associado.AssociadoMapper;
-import br.com.db.desafio.votacao.controller.associado.AssociadoRequestDto;
-import br.com.db.desafio.votacao.controller.associado.AssociadoResponseDto;
+import br.com.db.desafio.votacao.controller.associado.dto.AssociadoRequestDto;
+import br.com.db.desafio.votacao.controller.associado.dto.AssociadoResponseDto;
 import br.com.db.desafio.votacao.repository.AssociadoRepository;
+import br.com.db.desafio.votacao.usecase.associado.AssociadoMapper;
 import br.com.db.desafio.votacao.usecase.associado.CadastroAssociadoUseCase;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

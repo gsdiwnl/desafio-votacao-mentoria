@@ -1,9 +1,9 @@
 package br.com.db.desafio.votacao.usecase.sessao.impl;
 
-import br.com.db.desafio.votacao.controller.sessao.SessaoDto;
-import br.com.db.desafio.votacao.controller.sessao.SessaoMapper;
+import br.com.db.desafio.votacao.controller.sessao.dto.SessaoDto;
 import br.com.db.desafio.votacao.service.SessaoService;
 import br.com.db.desafio.votacao.usecase.sessao.CriarSessaoUseCase;
+import br.com.db.desafio.votacao.usecase.sessao.SessaoMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

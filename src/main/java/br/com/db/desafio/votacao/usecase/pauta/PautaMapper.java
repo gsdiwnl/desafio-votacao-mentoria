@@ -1,6 +1,9 @@
-package br.com.db.desafio.votacao.controller.pauta;
+package br.com.db.desafio.votacao.usecase.pauta;
 
-import br.com.db.desafio.votacao.controller.sessao.SessaoDto;
+import br.com.db.desafio.votacao.controller.pauta.dto.PautaRequestDto;
+import br.com.db.desafio.votacao.controller.pauta.dto.PautaResponseDto;
+import br.com.db.desafio.votacao.controller.pauta.dto.ResultadoPautaResponseDto;
+import br.com.db.desafio.votacao.controller.sessao.dto.SessaoDto;
 import br.com.db.desafio.votacao.model.pauta.Pauta;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;

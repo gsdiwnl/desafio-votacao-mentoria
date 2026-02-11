@@ -1,5 +1,8 @@
 package br.com.db.desafio.votacao.controller.pauta;
 
+import br.com.db.desafio.votacao.controller.pauta.dto.PautaRequestDto;
+import br.com.db.desafio.votacao.controller.pauta.dto.PautaResponseDto;
+import br.com.db.desafio.votacao.controller.pauta.dto.ResultadoPautaResponseDto;
 import br.com.db.desafio.votacao.usecase.pauta.BuscarPautaUseCase;
 import br.com.db.desafio.votacao.usecase.pauta.CriarPautaUseCase;
 import br.com.db.desafio.votacao.usecase.pauta.ResultadoPautaUseCase;

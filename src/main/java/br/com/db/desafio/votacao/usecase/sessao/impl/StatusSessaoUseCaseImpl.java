@@ -1,11 +1,11 @@
 package br.com.db.desafio.votacao.usecase.sessao.impl;
 
-import br.com.db.desafio.votacao.controller.sessao.SessaoMapper;
-import br.com.db.desafio.votacao.controller.sessao.SessaoResponseDto;
-import br.com.db.desafio.votacao.controller.sessao.StatusSessaoResponseDto;
+import br.com.db.desafio.votacao.controller.sessao.dto.SessaoResponseDto;
+import br.com.db.desafio.votacao.controller.sessao.dto.StatusSessaoResponseDto;
 import br.com.db.desafio.votacao.exception.ResourceNotFoundException;
 import br.com.db.desafio.votacao.model.sessao.Sessao;
 import br.com.db.desafio.votacao.repository.SessaoRepository;
+import br.com.db.desafio.votacao.usecase.sessao.SessaoMapper;
 import br.com.db.desafio.votacao.usecase.sessao.StatusSessaoUseCase;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
